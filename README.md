@@ -26,18 +26,18 @@ erDiagram
 
 # Diccionario de Datos
 
-| Entidad   | Atributo      | Tipo de Dato | Descripción                               |
-|-----------|---------------|--------------|-------------------------------------------|
+| Entidad   | Atributo      | Tipo de Dato | Descripción                              |
+|-----------|---------------|--------------|------------------------------------------|
 | PERSONAS  | id            | int          | Identificador único de la persona.       |
-|           | nombre        | string       | Nombre de la persona.                     |
-|           | apellido      | string       | Apellido de la persona.                   |
+|           | nombre        | varchar(20)  | Nombre de la persona.                    |
+|           | apellido      | varchar(20)  | Apellido de la persona.                  |
 | CIUDADES  | id            | int          | Identificador único de la ciudad.        |
-|           | codigo        | string       | Código de la ciudad (ej. IATA).          |
-|           | ciudad        | string       | Nombre de la ciudad.                      |
-| VUELOS    | id            | int          | Identificador único del vuelo.            |
+|           | codigo        | varchar(5)   | Código de la ciudad (ej. IATA).          |
+|           | ciudad        | varchar(10)  | Nombre de la ciudad.                     |
+| VUELOS    | id            | int          | Identificador único del vuelo.           |
 |           | origen_id     | int          | ID de la ciudad de origen.               |
 |           | destino_id    | int          | ID de la ciudad de destino.              |
-|           | duracion      | float        | Duración del vuelo en horas.              |
+|           | duracion      | int          | Duración del vuelo en minutos.           |
 | PASAJEROS | persona_id    | int          | ID de la persona que viaja.              |
 |           | vuelo_id      | int          | ID del vuelo en el que viaja.            |
 
